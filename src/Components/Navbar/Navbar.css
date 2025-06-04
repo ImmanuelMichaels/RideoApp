@@ -1,0 +1,75 @@
+.nav-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+/* Hamburger Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #282e30;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+  .nav-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 150px;
+    }
+
+    .logo {
+        display: flex;
+        padding-left: 20px;
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .nav-links {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 20px;
+        border-radius: 50px;
+        gap: 20px;
+        overflow: hidden;
+        background-color: whitesmoke;
+
+        li {
+            text-decoration: none;
+            list-style-type: none;
+            text-align: center;
+        }
+    }
+
+    .nav-button {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            background-color: #282e30;
+            padding: 14px 24px;
+            color: white;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 5px 20px 20px 5px #282e304d;
+        }
+    }
