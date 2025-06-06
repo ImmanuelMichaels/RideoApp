@@ -5,4 +5,11 @@
   padding: 0;
   scroll-behavior: smooth;
 }
+:root {
+  --primary-text-color: #282e30;
+  --primary-secondary-color: #010409;
+  --secondary-color: ;
+  --dip-color: ;
+  --text-color: ;
+}
 
