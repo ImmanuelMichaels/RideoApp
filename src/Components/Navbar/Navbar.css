@@ -1,17 +1,55 @@
+/* Wrapper container */
 .nav-section {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
-/* Hamburger Styles */
+
+/* Top part: logo + hamburger */
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Account Button */
+.account-button {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.account-button button {
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 13px 25px;
+  background-color: #282e30;
+  color: white;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+#signup-button {
+  background-color: white;
+  color: #282e30;
+  border: 2px solid #282e3079;
+}
+
+/* Hamburger */
 .hamburger {
-  display: none;
+  display: flex;
   flex-direction: column;
   cursor: pointer;
   padding: 10px;
+  z-index: 1001;
 }
 
 .hamburger .bar {
@@ -21,55 +59,79 @@
   margin: 4px 0;
   transition: 0.3s;
 }
-  .nav-container {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 150px;
-    }
 
-    .logo {
-        display: flex;
-        padding-left: 20px;
+/* Navigation links - hidden by default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: whitesmoke;
+  padding: 20px;
+  gap: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin-top: 70px;
+  position: absolute;
+}
 
-        img {
-            width: 100px;
-        }
-    }
+.nav-links.active {
+  display: flex;
+}
 
-    .nav-links {
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 15px 20px;
-        border-radius: 50px;
-        gap: 20px;
-        overflow: hidden;
-        background-color: whitesmoke;
+.nav-links li {
+  list-style: none;
+}
 
-        li {
-            text-decoration: none;
-            list-style-type: none;
-            text-align: center;
-        }
-    }
+.nav-button button {
+  background-color: #282e30;
+  padding: 14px 24px;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 20px 20px 5px #282e304d;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #282e30;
+  font-weight: 500;
+  font-size: 16px;
+}
 
-    .nav-button {
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+/* Accordion content inside nav */
+.accordion-item {
+  width: 100%;
+}
 
-        button {
-            background-color: #282e30;
-            padding: 14px 24px;
-            color: white;
-            border-radius: 30px;
-            border: none;
-            cursor: pointer;
-            box-shadow: 5px 20px 20px 5px #282e304d;
-        }
-    }
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.accordion-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 15px;
+  margin-top: 8px;
+}
+
+.accordion-content li a {
+  font-size: 14px;
+  color: #282e30;
+  text-decoration: none;
+}
+
+.arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
