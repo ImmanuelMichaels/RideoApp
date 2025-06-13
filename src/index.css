@@ -5,6 +5,15 @@
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'helvetica';
+  font-style: bold;
+  font-weight: normal;
+  src: url('/fonts/HelveticaNeueBold.ttf') format('truetype');
+  src: url('/fonts/HelveticaNeueMedium.ttf') format('truetype');
+  src: url('/fonts/Inder-Regular.ttf') format('truetype');
+}
+
 :root {
   --primary-text-color: #282e30;
   --primary-secondary-color: #010409;
@@ -13,6 +22,10 @@
   --text-color: ;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
-  font-family: inter;
+  font-family: 'helvetica', sans-serif;
 }
