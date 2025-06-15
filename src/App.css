@@ -31,7 +31,7 @@ div {
 }
 #section-flex {
   width: 1280px;
-  height: 720px;
+  height: auto;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -132,7 +132,7 @@ a:-webkit-any-link {
   }
   .reserved-list {
     padding: 36px;
-    width: calc(100% - 384px);
+    width: calc(100% - 330px);
   }
 
 }

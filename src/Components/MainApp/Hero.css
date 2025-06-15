@@ -19,12 +19,12 @@ a:-webkit-any-link {
 }
 
 .Hero .header-container {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
         
 .Hero 
@@ -420,13 +420,12 @@ button {
   text-align: start;
 }
 .reserved-details {
-  grid-column: 1/-1;
+  grid-column: 0;
   order: 0;
   width: 100%;
   align-self: center;
-  display: grid;
+  display: flex;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .reserved-list {
   background: rgb(157, 205, 214);
@@ -437,24 +436,34 @@ button {
   position: relative;
   vertical-align: top;
   width: 100%; 
+  
+}
+.reserve-logged {
+  width: 700px;
 }
 .reserved-list .list-heading {
-  margin: 20.88px 0;
+  margin-top: 20.88px;
   height: 88px;
   line-height: 44px;
-  width: 300px;
-  height: 88px;
+  /* height: 88px; */
+}
+ .booking-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
 }
 .benefit {
   border-color: rgba(0, 0, 0, 0.04);
-    border-style: solid;
-    border-width: 1px;
-    background: rgb(255, 255, 255);
-    border-radius: 12px;
-    padding: 12px 12px 0px;
+  border-style: solid;
+  border-width: 1px;
+  background: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 12px 12px 0px;
 }
 .benefit-list {
-  width: 300px;
+  width: 350px;
   height: auto;
   list-style-type: none;
   padding: 16px;

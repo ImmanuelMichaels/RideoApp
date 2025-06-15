@@ -299,52 +299,57 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="resevered-container" id='second-container'>
-            <div className="reserved-content" id="second-content">
+        <div className="resevered-container">
+            <div className="reserved-content">
                 <h2 className="heading" id='heading'>Plan for later</h2>
               <div className="reserved-details">
                 <div className="reserved-list">
-                  <h2 className="list-heading">Get your ride right with Rideo Reserve</h2>
-                  <div className="booking-details">
-                    <label htmlFor="text">Choose date and time</label>
-                    <div className="scheduling-inputs">
-                    <div className="input-with-icon">
-                      <svg className="i" fill="#000000" width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.89-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
-                        </g>
-                      </svg>
-                      <input
-                        type="date"
-                        value={rideDate}
-                        min={today}
-                        onChange={(e) => setRideDate(e.target.value)}
-                      />
+                  <div className="reserve-logged">
+                    <h2 className="list-heading">Get your ride right with Rideo Reserve</h2>
+                    <div className="booking-details">
+                      <label htmlFor="text">Choose date and time</label>
+                      <div className="scheduling-inputs">
+                      <div className="input-with-icon">
+                        <svg className="i" fill="#000000" width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                          <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.89-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                          </g>
+                        </svg>
+                        <input
+                          type="date"
+                          value={rideDate}
+                          min={today}
+                          onChange={(e) => setRideDate(e.target.value)}
+                        />
+                      </div>
+                      <div className="input-with-icon">
+                        <svg className="i" fill="#000000" width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                          <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                          </g>
+                        </svg>
+                        <select
+                          value={rideTime}
+                          onChange={(e) => setRideTime(e.target.value)}
+                        >
+                          {timeOptions.map((option) => (
+                            <option key={option.value} value={option.value}>
+                              {option.label}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
                     </div>
-                    <div className="input-with-icon">
-                      <svg className="i" fill="#000000" width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-                        </g>
-                      </svg>
-                      <select
-                        value={rideTime}
-                        onChange={(e) => setRideTime(e.target.value)}
-                      >
-                        {timeOptions.map((option) => (
-                          <option key={option.value} value={option.value}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
+                      <div className="set-button-content">
+                        <button>Next</button>
+                      </div>
                     </div>
-                  </div>
-                    <div className="set-button-content">
-                      <button>Next</button>
+                    <div className="reserve-logged-sub">
+                    
                     </div>
                   </div>
                 </div>
